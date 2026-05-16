@@ -10,11 +10,10 @@ import io.jsonwebtoken.security.Keys;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
-
 @Service
 public class JwtService {
 
-    @Value("${aplication.security.jwt.secret}")
+    @Value("${application.security.jwt.secret-key}")
     private String secretKey;
 
     @Value("${application.security.jwt.expiration}")
@@ -28,7 +27,6 @@ public class JwtService {
             .setExpiration(new Date(System.currentTimeMillis() + jwtExpiration))
             .signWith(getSingnInkey(), SignatureAlgorithm.HS256)
             .compact();
-
     }
 
     private Key getSingnInkey(){

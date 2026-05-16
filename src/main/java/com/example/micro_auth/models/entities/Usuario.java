@@ -1,4 +1,4 @@
-package com.example.micro_auth.model.entities;
+package com.example.micro_auth.models.entities;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
