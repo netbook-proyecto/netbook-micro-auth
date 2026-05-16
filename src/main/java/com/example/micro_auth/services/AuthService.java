@@ -43,7 +43,7 @@ public class AuthService {
     // Iniciar Sesion
     public String login(LoginRequest request) {
         
-        Usuario usuario = usuarioRepositories.findByCorreoInstitucional(request.getCorreo_institucional())
+        Usuario usuario = usuarioRepositories.findByCorreoInstitucional(request.getCorreoInstitucional())
             .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "El usuario no existe"));
     
         if (!passwordEncoder.matches(request.getContrasenia(), usuario.getContrasenia())) {
