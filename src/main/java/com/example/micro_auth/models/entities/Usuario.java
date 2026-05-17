@@ -17,7 +17,6 @@ public class Usuario {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long idUsuario;
     
-    // Alineado 100% con el MERE
     @Column(name = "correo_institucional", nullable = false, unique = true, length = 50)
     private String correoInstitucional;
 
