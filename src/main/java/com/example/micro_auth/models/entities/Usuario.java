@@ -17,24 +17,12 @@ public class Usuario {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long idUsuario;
     
-<<<<<<< HEAD
     @Column(name = "correo_institucional", nullable = false, unique = true, length = 100)
-=======
-    @Column(name = "correo_institucional", nullable = false, unique = true, length = 50)
->>>>>>> 6d58a006d31a60bb969bddd70f5e9dbbd15f60f0
     private String correoInstitucional;
 
     @Column(nullable = false)
     private String contrasenia;
-<<<<<<< HEAD
     
     @Column(nullable = false, length = 20)
     private String rol;
 }
-    
-=======
-
-    @Column(nullable = false, length = 50)
-    private String rol;
-}
->>>>>>> 6d58a006d31a60bb969bddd70f5e9dbbd15f60f0

@@ -2,13 +2,6 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
-<<<<<<< HEAD
-    <parent>
-        <groupId>org.springframework.boot</groupId>
-        <artifactId>spring-boot-starter-parent</artifactId>
-        <version>4.0.6</version>
-        <relativePath/> </parent>
-=======
     
     <parent>
         <groupId>org.springframework.boot</groupId>
@@ -17,40 +10,15 @@
         <relativePath/>
     </parent>
     
->>>>>>> 6d58a006d31a60bb969bddd70f5e9dbbd15f60f0
     <groupId>com.example</groupId>
     <artifactId>micro-auth</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>micro-auth</name>
     <description>Microservicio de Autenticación para netBOOK</description>
-<<<<<<< HEAD
-    <url/>
-    <licenses>
-        <license/>
-    </licenses>
-    <developers>
-        <developer/>
-	<dependency>
-    	<groupId>org.springdoc</groupId>
-    	<artifactId>springdoc-openapi-starter-common</artifactId>
-    	<version>2.5.0</version>
-	</dependency>
-    </developers>
-    <scm>
-        <connection/>
-        <developerConnection/>
-        <tag/>
-        <url/>
-    </scm>
-    <properties>
-        <java.version>21</java.version>
-        <spring-cloud.version>2025.1.1</spring-cloud.version>
-=======
 
     <properties>
         <java.version>21</java.version>
         <spring-cloud.version>2023.0.1</spring-cloud.version>
->>>>>>> 6d58a006d31a60bb969bddd70f5e9dbbd15f60f0
     </properties>
     
     <dependencies>
@@ -73,16 +41,6 @@
         </dependency>
 
         <dependency>
-            <groupId>org.springdoc</groupId>
-            <artifactId>springdoc-openapi-starter-webmvc-ui</artifactId>
-<<<<<<< HEAD
-            <version>2.8.5</version>
-=======
-            <version>2.5.0</version>
->>>>>>> 6d58a006d31a60bb969bddd70f5e9dbbd15f60f0
-        </dependency>
-
-        <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-data-jpa</artifactId>
         </dependency>
@@ -96,16 +54,13 @@
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
-<<<<<<< HEAD
-            <artifactId>spring-boot-starter-webmvc</artifactId>
+            <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-webflux</artifactId>
-=======
-            <artifactId>spring-boot-starter-web</artifactId>
->>>>>>> 6d58a006d31a60bb969bddd70f5e9dbbd15f60f0
         </dependency>
+
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
@@ -116,14 +71,15 @@
         </dependency>
 
         <dependency>
+            <groupId>org.springdoc</groupId>
+            <artifactId>springdoc-openapi-starter-webmvc-ui</artifactId>
+            <version>2.5.0</version>
+        </dependency>
+        <dependency>
             <groupId>com.mysql</groupId>
             <artifactId>mysql-connector-j</artifactId>
             <scope>runtime</scope>
         </dependency>
-<<<<<<< HEAD
-=======
-        
->>>>>>> 6d58a006d31a60bb969bddd70f5e9dbbd15f60f0
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
@@ -132,31 +88,12 @@
 
         <dependency>
             <groupId>org.springframework.boot</groupId>
-<<<<<<< HEAD
-            <artifactId>spring-boot-starter-data-jpa-test</artifactId>
-            <scope>test</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-security-test</artifactId>
-            <scope>test</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-validation-test</artifactId>
-            <scope>test</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-webmvc-test</artifactId>
-=======
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
         <dependency>
             <groupId>org.springframework.security</groupId>
             <artifactId>spring-security-test</artifactId>
->>>>>>> 6d58a006d31a60bb969bddd70f5e9dbbd15f60f0
             <scope>test</scope>
         </dependency>
     </dependencies>
@@ -187,45 +124,6 @@
                     </excludes>
                 </configuration>
             </plugin>
-<<<<<<< HEAD
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-compiler-plugin</artifactId>
-                <executions>
-                    <execution>
-                        <id>default-compile</id>
-                        <phase>compile</phase>
-                        <goals>
-                            <goal>compile</goal>
-                        </goals>
-                        <configuration>
-                            <annotationProcessorPaths>
-                                <path>
-                                    <groupId>org.projectlombok</groupId>
-                                    <artifactId>lombok</artifactId>
-                                </path>
-                            </annotationProcessorPaths>
-                        </configuration>
-                    </execution>
-                    <execution>
-                        <id>default-testCompile</id>
-                        <phase>test-compile</phase>
-                        <goals>
-                            <goal>testCompile</goal>
-                        </goals>
-                        <configuration>
-                            <annotationProcessorPaths>
-                                <path>
-                                    <groupId>org.projectlombok</groupId>
-                                    <artifactId>lombok</artifactId>
-                                </path>
-                            </annotationProcessorPaths>
-                        </configuration>
-                    </execution>
-                </executions>
-            </plugin>
-=======
->>>>>>> 6d58a006d31a60bb969bddd70f5e9dbbd15f60f0
         </plugins>
     </build>
 </project>
