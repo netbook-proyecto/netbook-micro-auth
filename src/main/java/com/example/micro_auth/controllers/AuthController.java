@@ -22,11 +22,12 @@ public class AuthController {
     @Autowired
     private AuthService authService;
 
+    
     @PostMapping("/register")
-    @Operation(summary = "Registrar un nuevo usuario", description = "Registra un nuevo usuario en el sistema")
+    @Operation(summary = "Registrar un nuevo usuario", description = "Registra un nuevo usuario en el sistema y le asigna un rol según su correo")
     public ResponseEntity<String> register(@Valid @RequestBody UsuarioRequest request) {
-        authService.register(request);
-        return ResponseEntity.ok("Usuario registrado exitosamente");
+        String respuesta = authService.registrarUsuario(request);
+        return ResponseEntity.ok(respuesta);
     }
 
     @PostMapping("/login")

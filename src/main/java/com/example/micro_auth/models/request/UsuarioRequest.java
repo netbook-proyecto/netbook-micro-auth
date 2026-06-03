@@ -7,13 +7,10 @@ import lombok.Data;
 public class UsuarioRequest {
 
     @NotBlank(message = "El correo es obligatorio")
-    private String correo;
+    private String correoInstitucional;
 
     @NotBlank(message = "La contraseña es obligatoria")
     private String contrasenia;
-
-    @NotBlank(message = "El rol es obligatorio")
-    private String rol;
 
 
     

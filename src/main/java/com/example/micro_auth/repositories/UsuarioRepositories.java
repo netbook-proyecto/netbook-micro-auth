@@ -1,14 +1,14 @@
 package com.example.micro_auth.repositories;
 
-import org.springframework.data.jpa.repository.JpaRepository;
-
 import com.example.micro_auth.models.entities.Usuario;
-
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
 import java.util.Optional;
 
-public interface UsuarioRepositories  extends JpaRepository<Usuario, Long> {
-    Optional<Usuario> findByCorreo(String correo);
-
-
+@Repository
+public interface UsuarioRepositories extends JpaRepository<Usuario, Long> {
     
+    Optional<Usuario> findByCorreoInstitucional(String correoInstitucional);
+    
+    boolean existsByCorreoInstitucional(String correoInstitucional);
 }
