@@ -1,4 +1,4 @@
-package com.example.micro_auth.services;
+   package com.example.micro_auth.services;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.password.PasswordEncoder;
@@ -31,7 +31,6 @@ public class AuthService {
 
     String correo = request.getCorreoInstitucional().toLowerCase();
     
-    // Clasificación por palabras clave (Muy fácil de entender y explicar)
     if (correo.contains("alumno")) {
         nuevoUsuario.setRol("ESTUDIANTE");
     } else if (correo.contains("docente")) {
