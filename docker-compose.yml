@@ -1,0 +1,19 @@
+services:
+  micro-auth:
+    build: .
+    container_name: micro-auth
+    restart: unless-stopped
+    ports:
+      - "5001:5001"
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:mysql://host.docker.internal:3306/micro_auth?useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true
+      SPRING_DATASOURCE_USERNAME: microser_auth
+      SPRING_DATASOURCE_PASSWORD: Auth.2026@
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    networks:
+      - red-microservicios
+
+networks:
+  red-microservicios:
+    external: true
